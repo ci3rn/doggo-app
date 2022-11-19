@@ -68,3 +68,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# A bunch of information
+
+npx - Node Package Execute (part of NPM)
+
+## Create react app boilerplate
+npx create-react-app .
+
+JSX - JavaScript XML
+
+## meta name
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name
+
+## meta name viewport
+https://www.w3schools.com/css/css_rwd_viewport.asp
+
+## meta name theme-color
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
+
+## React.StrictMode
+https://reactjs.org/docs/strict-mode.html
+
+## Removed from the boilerplate
+1. reportWebVitals(); -> https://create-react-app.dev/docs/measuring-performance/
+2. <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> from index.html
+3. <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> from index.html
+4. <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> from index.html
+5. Remove logos from publc directory
