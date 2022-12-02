@@ -1,18 +1,13 @@
+import React, { useContext } from 'react'
+import Doggo from '../components/Doggo'
+import DoggosContext from '../context/doggos-context'
 
-import React from "react";
-import { connect } from "react-redux";
-import selectDoggos from '../selectors/doggos';
+const DoggoList = () => {
+    const { doggos } = useContext(DoggosContext)
 
-const DoggoList = (props) => {
-    const doggos = props.doggos;
-  
     return doggos.map((doggo) => {
-        return <p key={doggo.id}>{doggo.name}</p>
+        return <Doggo key={doggo.id} doggo={doggo} />
     })
-  };
-  
-  const mapStateToProps = (state) => ({ doggos: selectDoggos(state.doggos, state.filters) });
-  
-  const ConnectedDoggoList = connect(mapStateToProps)(DoggoList);
-  
-  export default ConnectedDoggoList;
+}
+
+export { DoggoList as default }

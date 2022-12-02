@@ -1,17 +1,20 @@
-import doggosReducersDefaultState from '../doggos.json';
-import { createReducer } from '@reduxjs/toolkit';
+// state - array of doggos
+// type of action
 
-export default createReducer([] = doggosReducersDefaultState, (builder) => {
-    builder
-        .addDefaultCase((state, action) => {
-            return state;
-        });
-});
+const doggosReducer = (state, action) => {
+    switch(action.type) {
+      case 'POPULATE_DOGGOS':
+        return action.doggos
+      case 'ADD_DOGGO':
+        return [
+          ...state,
+          { id : action.id, name: action.name }
+        ]
+      case 'REMOVE_DOGGO':
+        return state.filter((doggo) => doggo.id !== action.id)
+      default:
+        return state
+    }
+  }
 
-// without using reduxjs/toolkit
-// export default (state = doggosReducersDefaultState, action) => {
-//     switch(action.type) {
-//         default:
-//             return state;
-//     }
-// };
+  export { doggosReducer as default } 
