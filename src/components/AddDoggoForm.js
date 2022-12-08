@@ -54,7 +54,7 @@ const AddDoggoForm = () => {
         e.preventDefault()
         const doggo = {
             id: uuidv4(),
-            image_url: imageUrl,
+            image: { url: imageUrl },
             name,
             breed_group: breedGroup,
             country_code: countryCode,
@@ -127,13 +127,6 @@ const AddDoggoForm = () => {
             </Form>
         </Modal.Body>
     </>
-
-    // return <form onSubmit={addDoggo}>
-    //     Doggo name: <input value={doggoName} onChange={(e) => setDoggoName(e.target.value)} /><br />
-    //     Doggo age: <input value={doggoAge} onChange={(e) => setDoggoAge(e.target.value)} /><br />
-    //     Doggo weight: <input value={doggoWeight} onChange={(e) => setDoggoWeight(e.target.value)} /><br />
-    //     <button>Add doggo</button>
-    // </form>
 }
 
 export { AddDoggoForm as default }

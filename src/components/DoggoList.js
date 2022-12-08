@@ -6,17 +6,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const CARDS_IN_ROW = 3;
-
 const DoggoList = () => {
     const { doggos, filters } = useContext(DoggosContext)
     const filteredDoggos = doggosSelector(doggos, { text: filters.text, sortBy: filters.sortBy })
-
     return (
         <Container>
             <Row>
                 {filteredDoggos.map((doggo, index) => (
-                    <Col key={index} xs={CARDS_IN_ROW}>
+                    <Col key={index} xs='auto'>
                         <DoggoListItem key={doggo.id} doggo={doggo} />
                     </Col>
                 ))}
