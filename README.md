@@ -97,3 +97,6 @@ https://reactjs.org/docs/strict-mode.html
 3. <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> from index.html
 4. <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> from index.html
 5. Remove logos from publc directory
+
+# Additional installs
+1. npm install react-bootstrap bootstrap

@@ -2,13 +2,10 @@ import React, { useContext } from "react"
 import DoggosContext from '../context/doggos-context'
 
 const Doggo = ({ doggo }) => {
-    const { dispatch } = useContext(DoggosContext)
+    const { doggosDispatch } = useContext(DoggosContext)
 
     const removeDoggo = () => {
-        dispatch({
-            type: 'REMOVE_DOGGO',
-            id: doggo.id
-        })
+        doggosDispatch({ type: 'REMOVE_DOGGO', id: doggo.id })
     }
 
     return (
